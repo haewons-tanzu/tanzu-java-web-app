@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>8</java.version>
+		<springdoc.version>1.6.9</springdoc.version>
 	</properties>
 
 	<licenses>
@@ -48,6 +49,12 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${springdoc.version}</version>
+        </dependency>
 		
 		<!-- insecure log4j -->
 		<!--
