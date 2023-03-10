@@ -30,9 +30,7 @@ build/
 !**/src/test/**/build/
 
 ### VS Code ###
-src/.DS_Store
-src/main/.DS_Store
-src/main/java/.DS_Store
-src/main/java/com/.DS_Store
-src/main/java/com/example/.DS_Store
 .DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
