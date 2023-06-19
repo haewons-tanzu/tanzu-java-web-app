@@ -14,5 +14,5 @@ spec:
   #consumesApis:
   # - demo-api
   lifecycle: experimental
-  owner: default-team
-  system: tanzu-roadshow
+  owner: dev-team-01
+  system: springone-tour

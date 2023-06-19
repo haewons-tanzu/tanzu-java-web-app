@@ -10,8 +10,8 @@ metadata:
 spec:
   type: openapi
   lifecycle: experimental
-  owner: default-team
-  system: tanzu-roadshow # Or specify system name of your choice
+  owner: dev-team-01
+  system: springone-tour # Or specify system name of your choice
   definition: |
     openapi: 3.0.2
     servers:
