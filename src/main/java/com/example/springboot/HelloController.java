@@ -8,7 +8,8 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String index() {
-		String str = "Greetings from Spring Boot + Tanzu!";
+		String str = "<center><h1>Greetings from Spring Boot + Tanzu!</h1></center><br/><br/><br/>"
+				+ "<img src='https://spring.io/img/spring-2.svg' />";
 		return str;
 	}
 
