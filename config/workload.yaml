@@ -6,14 +6,29 @@ metadata:
     apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/part-of: tanzu-java-web-app
     apps.tanzu.vmware.com/has-tests: "true"
+    tanzu.app.live.view: "true"
+    tanzu.app.live.view.application.name: tanzu-java-web-app
+    apis.apps.tanzu.vmware.com/register-api: "true"
+  annotations:
+    autoscaling.knative.dev/minScale: "1"
 spec:
   params:
   - name: testing_pipeline_matching_labels
     value:
       apps.tanzu.vmware.com/pipeline: test
       apps.tanzu.vmware.com/language: java
+  - name: api_descriptor
+    value:
+      type: openapi
+      location:
+        path: "/v3/api-docs"
+      system: dev
+      owner: team-a
+      description: "A set of API endpoints."
   source:
     git:
       url: https://github.com/haewons-tanzu/tanzu-java-web-app
       ref:
         branch: master
+
+

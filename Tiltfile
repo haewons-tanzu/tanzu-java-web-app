@@ -19,7 +19,8 @@ k8s_custom_deploy(
     ]
 )
 
-allow_k8s_contexts('iterate-cluster')
+#allow_k8s_contexts('iterate-cluster')
+allow_k8s_contexts('arn:aws:eks:ap-northeast-2:698489875176:cluster/full-cluster')
 
 k8s_resource('tanzu-java-web-app', port_forwards=["8080:8080"],
             extra_pod_selectors=[{'carto.run/workload-name': 'tanzu-java-web-app', 'app.kubernetes.io/component': 'run'}])
