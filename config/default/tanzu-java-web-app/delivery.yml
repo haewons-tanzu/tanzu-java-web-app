@@ -7,9 +7,12 @@ metadata:
     ootb.apps.tanzu.vmware.com/apidescriptor-ref: "true"
     kapp.k14s.io/change-rule: upsert after upserting servicebinding.io/ServiceBindings
   labels:
+    apis.apps.tanzu.vmware.com/register-api: "true"
     app.kubernetes.io/part-of: tanzu-java-web-app
-    apps.tanzu.vmware.com/has-tests: "false"
+    apps.tanzu.vmware.com/has-tests: "true"
     apps.tanzu.vmware.com/workload-type: web
+    tanzu.app.live.view: "true"
+    tanzu.app.live.view.application.name: tanzu-java-web-app
     app.kubernetes.io/component: run
     carto.run/workload-name: tanzu-java-web-app
 spec:
@@ -47,7 +50,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.health.probes.enabled="true" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: gcr.io/boyounggcp/supply-chain/tanzu-java-web-app-default@sha256:9136c1bd870c85bca2f8bdd57be6a73811de54d9e0b244a8a22ce03c204282f4
+        image: gcr.io/boyounggcp/supply-chain/tanzu-java-web-app-default@sha256:08208f04d73e41a867c6ad174af2bfd9c0e9540a9168837e7b389819854d2252
         livenessProbe:
           httpGet:
             path: /livez
