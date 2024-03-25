@@ -10,7 +10,7 @@ public class HelloController {
 	public String index() {
 		/*String str = "<br/><br/><center><h1>Greetings from Spring Boot + Tanzu!</h1></center><br/><br/><br/>"
 				+ "<img src='https://spring.io/img/spring-2.svg' />";*/
-		String str = "Welcome Tanzu!!!!";
+		String str = "Greetings from Spring Boot + Tanzu! Welcome!!!";
 		
 		return str;
 	}
