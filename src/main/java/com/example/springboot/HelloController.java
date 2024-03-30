@@ -21,7 +21,7 @@ public class HelloController {
 		return "getParamByName.Input Name: " + name;
 	}
 
-	@GetMapping("/test/{id}")
+	@GetMapping("/test/{name}")
 	public String getRestParamByName(@PathVariable("name") String name){
 		return "getRestParamByName.Input Name: " + name;
 	}
