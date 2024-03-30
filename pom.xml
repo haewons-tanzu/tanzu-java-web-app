@@ -16,7 +16,6 @@
 
 	<properties>
 		<java.version>8</java.version>
-		<springdoc.version>1.6.9</springdoc.version>
 	</properties>
 
 	<licenses>
@@ -43,28 +42,23 @@
 			<scope>test</scope>
 		</dependency>
 
-    		<!-- live reload -->
+    	<!-- live reload -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-
-		<dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-ui</artifactId>
-            <version>${springdoc.version}</version>
-        </dependency>
 		
-		<!-- insecure log4j -->
-		<!--
+		<!-- for external Tomcat -->
 		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.15.0</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency>
-		-->
+
 	</dependencies>
+	<!-- for external Tomcat -->
+	<packaging>war</packaging>
 
 	<build>
 		<plugins>
@@ -75,6 +69,14 @@
 				  <excludeDevtools>false</excludeDevtools>
 				</configuration>
 				<executions>
+					<!-- for external Tomcat -->
+					<execution>
+							<id>repackage</id>
+							<configuration>
+								<classifier>exec</classifier>
+							</configuration>
+						</execution>
+					</executions>
 					<execution>
 						<goals>
 							<goal>build-info</goal>
