@@ -1,3 +1,5 @@
+package com.example.springboot;
+
 /*
  * Tomcat Server Config
  */
