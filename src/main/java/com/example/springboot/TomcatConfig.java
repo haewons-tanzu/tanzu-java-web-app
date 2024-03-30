@@ -17,11 +17,11 @@ public class TomcatConfig implements WebServerFactoryCustomizer<TomcatServletWeb
 	@Bean
 	public ServletWebServerFactory servletContainer() {
 		TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
-		tomcat.addAdditionalTomcatConnectors(createAjpConnector());
+		tomcat.addAdditionalTomcatConnectors(createHttpConnector());
 		return tomcat;
 	}
 
-	private Connector createAjpConnector() {
+	private Connector createHttpConnector() {
 		Connector httpConnector = new Connector("HTTP/1.1");
 		httpConnector.setPort(8443);	// HTTP Port
 		httpConnector.setSecure(false);
