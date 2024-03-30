@@ -48,18 +48,9 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-		
-		<!-- for external Tomcat -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
 
 	</dependencies>
-	<!-- for external Tomcat -->
-	<packaging>war</packaging>
-
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -69,13 +60,6 @@
 				  <excludeDevtools>false</excludeDevtools>
 				</configuration>
 				<executions>
-					<!-- for external Tomcat -->
-					<execution>
-						<id>repackage</id>
-						<configuration>
-							<classifier>exec</classifier>
-						</configuration>
-					</execution>
 					<execution>
 						<goals>
 							<goal>build-info</goal>
