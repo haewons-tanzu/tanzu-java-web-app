@@ -22,13 +22,13 @@ public class TomcatConfig implements WebServerFactoryCustomizer<TomcatServletWeb
 	}
 
 	private Connector createAjpConnector() {
-		Connector ajpConnector = new Connector("AJP/1.3");
-		ajpConnector.setPort(8443);	// ajp Port
-		ajpConnector.setSecure(false);
-		ajpConnector.setAllowTrace(false);
-		ajpConnector.setScheme("http");
-		ajpConnector.setRedirectPort(8080);	// http or https port
-		return ajpConnector;
+		Connector httpConnector = new Connector("HTTP/1.1");
+		httpConnector.setPort(8443);	// HTTP Port
+		httpConnector.setSecure(false);
+		httpConnector.setAllowTrace(false);
+		httpConnector.setScheme("http");
+		httpConnector.setRedirectPort(8080);	// http or https port
+		return httpConnector;
 	}
 
 	@Override
