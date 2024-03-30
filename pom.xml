@@ -71,12 +71,11 @@
 				<executions>
 					<!-- for external Tomcat -->
 					<execution>
-							<id>repackage</id>
-							<configuration>
-								<classifier>exec</classifier>
-							</configuration>
-						</execution>
-					</executions>
+						<id>repackage</id>
+						<configuration>
+							<classifier>exec</classifier>
+						</configuration>
+					</execution>
 					<execution>
 						<goals>
 							<goal>build-info</goal>
