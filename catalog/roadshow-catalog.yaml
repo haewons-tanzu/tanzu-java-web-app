@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spring-microservice-with-rabbitmq
+  description: Spring Microservice With RabbitMQ
+  tags:
+    - app-accelerator
+    - java
+    - spring
+    - web
+    - tanzu
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=spring-microservice-with-rabbitmq'
+spec:
+  type: service
+  providesApis:
+   - spring-microservice-with-rabbitmq-api
+  consumesApis:
+   - demo-api
+  lifecycle: experimental
+  owner: dev-team-01
+  system: springone-tour
